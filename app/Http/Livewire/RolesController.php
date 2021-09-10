@@ -85,7 +85,7 @@ class RolesController extends Component
         $role->name = $this->roleName;
         $role->save();
 
-        $this->emit('role-update', 'Se actualizó el rol con exito');
+        $this->emit('role-updated', 'Se actualizó el rol con exito');
         $this->resetUI();
     }
 
