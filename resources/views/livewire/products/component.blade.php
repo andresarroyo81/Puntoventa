@@ -6,7 +6,7 @@
                     <b>{{ $componentName }} | {{ $pageTitle }}</b>
                 </h4>
                 <ul class="tabs tab-pills">
-                    @can('Productos_Crear')
+                    @can('Productos_Agregar')
                     <li>
                         <a href="javascript:void(0)" class="tabmenu bg-dark" data-toggle="modal"
                             data-target="#theModal">Agregar</a>
@@ -53,20 +53,23 @@
                                         </span>
                                     </td>
                                     <td class="text-center">
-                                        @can('Products_Update')
+                                        @can('Productos_Editar')
                                         <a href="javascript:void(0)"
                                         wire:click.prevent="Edit({{ $product->id }})"
                                             class="btn btn-dark mtmobile" title="Edit">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                         @endcan
-                                        @can('Product_Destroy')
+                                        @can('Productos_Eliminar')
                                         <a href="javascript:void(0)"
                                         onclick="Confirm('{{ $product->id }}')"
                                             class="btn btn-dark" title="Delete">
                                             <i class="fas fa-trash"></i>
                                         </a>
                                         @endcan
+                                        <button wire:click.prevent="ScanCode('{{$product->barcode}}')" class="btn btn-dark">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach

@@ -6,7 +6,7 @@
                     <b>{{ $componentName }} | {{ $pageTitle }}</b>
                 </h4>
                 <ul class="tabs tab-pills">
-                    @can('Category_Create')
+                    @can('Categorias_Agregar')
                         <li>
                             <a href="javascript:void(0)" class="tabmenu bg-dark" data-toggle="modal"
                                 data-target="#theModal">Agregar</a>
@@ -14,7 +14,7 @@
                     @endcan
                 </ul>
             </div>
-            @can('Category_Search')
+            @can('Categorias_Buscar')
                 @include('common.searchbox')
             @endcan
             <div class="widget-content">
@@ -40,14 +40,14 @@
                                         </span>
                                     </td>
                                     <td class="text-center">
-                                        @can('Category_Update')
+                                        @can('Categorias_Editar')
                                             <a href="javascript:void(0)" wire:click="Edit({{ $category->id }})"
                                                 class="btn btn-dark mtmobile" title="Edit">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                         @endcan
                                         @if ($category->products->count() < 1)
-                                            @can('Category_Destroy')
+                                            @can('Categorias_Eliminar')
                                                 <a href="javascript:void(0)" onclick="Confirm('{{ $category->id }}')"
                                                     class="btn btn-dark" title="Delete">
                                                     <i class="fas fa-trash"></i>
@@ -81,7 +81,13 @@
         });
     });
 
-    function Confirm(id, products) {
+    function Confirm(id, products)
+    {
+        if(products > 0)
+        {
+            swal('NOSE PUEDE ELIMINAR LA CATEGORIA PORQUE TIENE PRODUCTOS RELACIONADOS')
+            return;
+        }
 
         Swal.fire({
             title: 'CONFIRMAR',

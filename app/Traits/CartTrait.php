@@ -19,7 +19,7 @@ trait CartTrait{
 
             if ($this->InCart($product->id))
             {
-                $this->IncreaseQuantity($product->id);
+                $this->IncreaseQuantity($product);
                 return;
             }
 

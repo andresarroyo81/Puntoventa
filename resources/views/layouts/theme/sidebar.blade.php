@@ -3,7 +3,7 @@
 
         <ul class="menu-categories">
 
-            @can('Category_Index')
+            @can('Categorias_Index')
                 <li class="active">
                     <a href="{{ url('categories') }}" class="menu-toggle" data-active="true">
                         <div class="base-menu">
@@ -93,8 +93,8 @@
                         </div>
                     </a>
                 </li>
-            @endcan
-            @can('Asignar_Index')
+                @endcan
+                @can('Asignar_Index')
                 <li class="">
                     <a href="{{ url('asignar') }}" class="menu-toggle" data-active="flase">
                         <div class="base-menu">
@@ -110,8 +110,8 @@
                         </div>
                     </a>
                 </li>
-            @endcan
-            @can('Users_Index')
+                @endcan
+                @can('Usuarios_Index')
             <li class="">
                 <a href="{{ url('users') }} " class="menu-toggle" data-active="flase">
                     <div class="base-menu">
@@ -130,7 +130,7 @@
                 </a>
             </li>
             @endcan
-            @can('Coins_Index')
+            @can('Monedas_Index')
             <li class="">
                 <a href="{{ url('coins') }}" class="menu-toggle" data-active="flase">
                     <div class="base-menu">
@@ -147,7 +147,7 @@
                 </a>
             </li>
             @endcan
-            @can('Cashout_Index')
+            @can('Arqueos_Index')
             <li class="">
                 <a href="{{ url('cashout') }}" class="menu-toggle" data-active="flase">
                     <div class="base-menu">
@@ -164,7 +164,7 @@
                 </a>
             </li>
             @endcan
-            @can('Reports_Index')
+            @can('Reportes_Index')
             <li class="">
                 <a href="{{ url('reports') }}" class="menu-toggle" data-active="flase">
                     <div class="base-menu">

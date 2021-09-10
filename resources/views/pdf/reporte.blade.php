@@ -21,7 +21,7 @@
             </tr>
             <tr>
                 <td width="30%" style="verticual-align: top; padding-top: 10px, position: relative;">
-                    <img src="{{ asset('assets/img/livewire_logo.png') }}" alt="" class="invoice-logo">
+                    <img src="{{ asset('assets/img/Super2.png') }}" alt="" class="invoice-logo">
                 </td>
                 <td width="70%" class="text-left text-company" style="vertical-align: top; padding-top: 10px">
                     @if ($reportType == 0)
