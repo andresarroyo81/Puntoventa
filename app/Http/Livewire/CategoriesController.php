@@ -137,7 +137,7 @@ class CategoriesController extends Component
 
     public function Destroy($id)
     {
-        $category = Category::find($id);        
+        $category = Category::find($id);
         $imageName = $category->image;
         $category->delete();
 
