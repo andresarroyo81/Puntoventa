@@ -18,8 +18,8 @@ class Category extends Model
 
     public function getImagenAttribute()
     {
-        if($this->image != null)
-            return (file_exists('storage/categories/' . $this->image) ? $this->image : 'noimg.jpg');
+        if(file_exists('storage/categories/' . $this->image))
+            return $this->image;
         else
             return 'noimg.jpg';
     }

@@ -2,7 +2,7 @@
     <header class="header navbar navbar-expand-sm">
         <ul class="navbar-item flex-row">
             <li class="nav-item theme-logo">
-                <a href="index.html">
+                <a href="{{ url('pos') }}">
                     <img src="assets/img/Super2.png" class="navbar-logo" alt="logo"><b
                         style="font-size: 19px; color:#3B3F8C">Miscelanea EMMANUEL</b>
                 </a>
